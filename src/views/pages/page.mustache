@@ -1,0 +1,27 @@
+{{>partials/header}}
+
+{{#banner}}
+<section class="banner" style="background-image: url('images/{{background}}')">
+  {{title}}
+</section>
+<h2>{{title}} disponíveis para adoção</h2>
+{{/banner}}
+
+<section class="container list">
+  {{#pets}}
+    <article class="item">
+      <img src="images/{{image}}" class="item--image" />
+      <p class="item--name">{{name}}</p>
+      <p class="item--color">{{color}}</p>
+      <p class="item--genre">Gênero: {{sex}}</p>
+    </article>
+  {{/pets}}
+</section>
+
+{{^pets}}
+  <section class="container no-list">
+    <h2>Nenhum animal encontrado</h2>
+  </section>
+{{/pets}}
+
+{{>partials/footer}}
